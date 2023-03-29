@@ -34,7 +34,7 @@ class GameListAdapter(
         viewHolder.game_platform_textview.text=games[position].platform
         viewHolder.game_release_date_textview.text=games[position].releaseDate
         viewHolder.game_title_textview.text=games[position].title
-        viewHolder.game_rating_textview.text=games[position].rating.toBigDecimal().toPlainString()
+        viewHolder.game_rating_textview.text=games[position].rating.toString()
 
     }
     override fun getItemCount():Int = games.size

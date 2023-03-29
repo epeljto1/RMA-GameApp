@@ -5,36 +5,34 @@
     android:layout_width="128dp"
     android:layout_height="172dp"
     android:layout_marginEnd="8dp"
+    android:layout_gravity="center"
     app:cardCornerRadius="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="174dp"
+        android:scrollbars="vertical">
 
         <TextView
             android:id="@+id/game_rating_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="170dp"
+            android:layout_width="46dp"
+            android:layout_height="173dp"
             android:text="Rating"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/game_title_textview"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            tools:layout_editor_absoluteY="0dp" />
 
         <TextView
             android:id="@+id/game_title_textview"
-            android:layout_width="89dp"
-            android:layout_height="67dp"
+            android:layout_width="81dp"
+            android:layout_height="79dp"
             android:text="Title"
-            app:layout_constraintBottom_toTopOf="@+id/game_release_date_textview"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/game_rating_textview"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/game_release_date_textview"
-            android:layout_width="86dp"
-            android:layout_height="45dp"
+            android:layout_width="81dp"
+            android:layout_height="41dp"
             android:text="Release Date"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/game_rating_textview"
@@ -42,11 +40,12 @@
 
         <TextView
             android:id="@+id/game_platform_textview"
-            android:layout_width="87dp"
-            android:layout_height="58dp"
+            android:layout_width="81dp"
+            android:layout_height="55dp"
             android:text="Platform"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/game_rating_textview" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

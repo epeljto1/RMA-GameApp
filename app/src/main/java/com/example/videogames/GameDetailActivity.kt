@@ -1,7 +1,9 @@
 package com.example.videogames
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +22,12 @@ class GameDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.game_details_layout)
+
+        val buttonClick = findViewById<Button>(R.id.home_button)
+        buttonClick.setOnClickListener{
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
         title = findViewById(R.id.game_title_textview)
         platform = findViewById(R.id.platforn_textview)
         releaseDate = findViewById(R.id.release_date_textview)
@@ -47,4 +55,6 @@ class GameDetailActivity : AppCompatActivity() {
         genre.text = game.genre
         description.text = game.description
     }
+
+
 }

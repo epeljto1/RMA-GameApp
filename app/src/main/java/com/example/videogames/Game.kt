@@ -11,4 +11,5 @@ data class Game(
     val publisher: String,
     val genre: String,
     val description: String,
+    val userImpressions: List<UserImpression>,
 )

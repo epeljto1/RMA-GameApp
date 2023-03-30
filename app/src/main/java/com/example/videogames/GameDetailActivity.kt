@@ -18,10 +18,14 @@ class GameDetailActivity : AppCompatActivity() {
     private lateinit var publisher: TextView
     private lateinit var genre: TextView
     private lateinit var description: TextView
+    private lateinit var detailsBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.game_details_layout)
+
+        detailsBtn = findViewById(R.id.details_button)
+        detailsBtn.isEnabled=false
 
         val buttonClick = findViewById<Button>(R.id.home_button)
         buttonClick.setOnClickListener{

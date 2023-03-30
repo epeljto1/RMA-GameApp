@@ -3,6 +3,7 @@ package com.example.videogames
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -10,10 +11,20 @@ class MainActivity : AppCompatActivity() {
     private lateinit var Games: RecyclerView
     private lateinit var GamesAdapter: GameListAdapter
     private var GamesList =  GameData.getAll()
+    private lateinit var homeBtn: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        homeBtn = findViewById(R.id.home_button)
+        homeBtn.isEnabled = false
+
+        val buttonClick = findViewById<Button>(R.id.details_button)
+        buttonClick.setOnClickListener {
+
+        }
         Games = findViewById(R.id.game_list)
         Games.layoutManager = LinearLayoutManager(
             this,
@@ -31,4 +42,6 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
+
+
 }

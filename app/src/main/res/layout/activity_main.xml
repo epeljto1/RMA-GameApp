@@ -27,6 +27,9 @@
         android:id="@+id/logo_image"
         android:layout_width="109dp"
         android:layout_height="95dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/search_query_edittext"
+        app:layout_constraintEnd_toStartOf="@+id/details_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/video_game2" />
@@ -60,7 +63,7 @@
         android:layout_height="566dp"
         android:layout_marginTop="8dp"
         android:background="#00BCD4"
-        android:paddingLeft="150dp"
+        android:paddingLeft="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_query_edittext" />
 

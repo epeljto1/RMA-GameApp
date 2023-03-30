@@ -29,7 +29,7 @@
         android:layout_height="95dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/video_game2" />
+        app:srcCompat="@drawable/videogame" />
 
     <TextView
         android:id="@+id/game_title_textview"

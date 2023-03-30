@@ -1,5 +1,6 @@
 package com.example.videogames
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,8 +20,15 @@ class MainActivity : AppCompatActivity() {
             LinearLayoutManager.VERTICAL,
             false
         )
-        GamesAdapter = GameListAdapter(listOf())
+        GamesAdapter = GameListAdapter(arrayListOf()) {game ->  showGameDetails(game)}
         Games.adapter = GamesAdapter
         GamesAdapter.updateGames(GamesList)
+    }
+
+    private fun showGameDetails(game: Game) {
+        val intent = Intent(this, GameDetailActivity::class.java).apply {
+            putExtra("game_title", game.title)
+        }
+        startActivity(intent)
     }
 }

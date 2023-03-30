@@ -27,6 +27,8 @@
         android:id="@+id/logo_image"
         android:layout_width="109dp"
         android:layout_height="95dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintEnd_toStartOf="@+id/details_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/videogame" />
@@ -122,7 +124,7 @@
         app:layout_constraintTop_toBottomOf="@+id/genre_textview" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rating_list"
+        android:id="@+id/impression_list"
         android:layout_width="413dp"
         android:layout_height="126dp"
         app:layout_constraintBottom_toBottomOf="parent"

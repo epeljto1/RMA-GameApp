@@ -35,92 +35,101 @@
 
     <TextView
         android:id="@+id/game_title_textview"
-        android:layout_width="224dp"
+        android:layout_width="409dp"
         android:layout_height="21dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="94dp"
+        android:gravity="center"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_image" />
 
     <ImageView
         android:id="@+id/cover_imageview"
-        android:layout_width="101dp"
+        android:layout_width="409dp"
         android:layout_height="115dp"
         android:layout_marginTop="11dp"
-        android:layout_marginEnd="155dp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/game_title_textview"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/platforn_textview"
-        android:layout_width="87dp"
+        android:layout_width="409dp"
         android:layout_height="22dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="162dp"
+        android:gravity="center"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cover_imageview" />
 
     <TextView
         android:id="@+id/release_date_textview"
-        android:layout_width="69dp"
+        android:layout_width="409dp"
         android:layout_height="19dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="171dp"
+        android:gravity="center"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/platforn_textview" />
 
     <TextView
         android:id="@+id/esrb_rating_textview"
-        android:layout_width="wrap_content"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
-        android:layout_marginEnd="177dp"
+        android:gravity="center"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/release_date_textview" />
 
     <TextView
         android:id="@+id/developer_textview"
-        android:layout_width="141dp"
+        android:layout_width="409dp"
         android:layout_height="21dp"
         android:layout_marginTop="26dp"
-        android:layout_marginEnd="133dp"
+        android:gravity="center"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/esrb_rating_textview" />
 
     <TextView
         android:id="@+id/publisher_textview"
-        android:layout_width="130dp"
+        android:layout_width="409dp"
         android:layout_height="22dp"
         android:layout_marginTop="19dp"
-        android:layout_marginEnd="141dp"
+        android:gravity="center"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/developer_textview" />
 
     <TextView
         android:id="@+id/genre_textview"
-        android:layout_width="72dp"
+        android:layout_width="409dp"
         android:layout_height="20dp"
         android:layout_marginTop="22dp"
-        android:layout_marginEnd="170dp"
+        android:gravity="center"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/publisher_textview" />
 
     <TextView
         android:id="@+id/description_textview"
-        android:layout_width="360dp"
+        android:layout_width="409dp"
         android:layout_height="61dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="26dp"
+        android:gravity="center"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/genre_textview" />
 
     <androidx.recyclerview.widget.RecyclerView

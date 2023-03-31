@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showGameDetails(game: Game) {
         val intent = Intent(this, GameDetailActivity::class.java).apply {
-            putExtra("game_title", game.title)
+            putExtra("game_title_textview", game.title)
         }
         startActivity(intent)
     }

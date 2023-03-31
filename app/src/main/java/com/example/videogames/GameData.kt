@@ -7,7 +7,9 @@ class GameData {
         {
             return listOf(
                 Game("Tekken 6","PS3","27.10.2009",8.8,
-                    "","","","","","",listOf()),
+                    "tekken6","T","Namco Bandai Games","Namco Bandai Games",
+                    "Fighting","Tekken 6 (Japanese: 鉄拳6) is a fighting game developed and published by Bandai Namco Games. " +
+                            "It is the sixth main and seventh installment in the Tekken franchise.",listOf()),
                 Game("Grand Theft Auto V","PS5","17.09.2013",10.0,
                 "","","","","","", listOf()
                 ),

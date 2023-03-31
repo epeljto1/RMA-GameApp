@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 class GameDetailActivity : AppCompatActivity() {
     private lateinit var game: Game
     private lateinit var title: TextView
+    private lateinit var coverImage: ImageView
     private lateinit var platform: TextView
     private lateinit var releaseDate: TextView
     private lateinit var esrbrating: TextView
@@ -33,6 +34,7 @@ class GameDetailActivity : AppCompatActivity() {
             startActivity(intent)
         }
         title = findViewById(R.id.game_title_textview)
+        coverImage = findViewById(R.id.cover_imageview)
         platform = findViewById(R.id.platforn_textview)
         releaseDate = findViewById(R.id.release_date_textview)
         esrbrating = findViewById(R.id.esrb_rating_textview)
@@ -51,6 +53,11 @@ class GameDetailActivity : AppCompatActivity() {
 
     private fun populateDetails() {
         title.text = game.title
+        val context: Context = coverImage.context
+        var g = GameData.getDetails(game.title)
+        val imageName: String = g.coverImage
+        var id: Int = context.resources.getIdentifier(imageName,"drawable",context.packageName)
+        coverImage.setImageResource(id)
         platform.text = game.platform
         releaseDate.text = game.releaseDate
         esrbrating.text = game.esrbRating

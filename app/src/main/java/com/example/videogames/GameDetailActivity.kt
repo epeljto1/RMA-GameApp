@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class GameDetailActivity : AppCompatActivity() {
     private lateinit var game: Game
@@ -20,6 +22,8 @@ class GameDetailActivity : AppCompatActivity() {
     private lateinit var genre: TextView
     private lateinit var description: TextView
     private lateinit var detailsBtn: Button
+    private lateinit var Impressions: RecyclerView
+    private lateinit var ImpressionAdapter: GameImpressionAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +46,9 @@ class GameDetailActivity : AppCompatActivity() {
         publisher = findViewById(R.id.publisher_textview)
         genre = findViewById(R.id.genre_textview)
         description = findViewById(R.id.description_textview)
+        Impressions = findViewById(R.id.impression_list)
+
+
         val extras = intent.extras
         if (extras != null) {
             game = GameData.getDetails(extras.getString("game_title_textview",""))
@@ -57,6 +64,7 @@ class GameDetailActivity : AppCompatActivity() {
         var g = GameData.getDetails(game.title)
         val imageName: String = g.coverImage
         var id: Int = context.resources.getIdentifier(imageName,"drawable",context.packageName)
+        val ImpressionList: List<UserImpression> = g.userImpressions
         coverImage.setImageResource(id)
         platform.text = game.platform
         releaseDate.text = game.releaseDate
@@ -65,6 +73,11 @@ class GameDetailActivity : AppCompatActivity() {
         publisher.text = game.publisher
         genre.text = game.genre
         description.text = game.description
+        Impressions.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
+        ImpressionAdapter = GameImpressionAdapter(listOf())
+        Impressions.adapter=ImpressionAdapter
+        ImpressionAdapter.updateImpressions(ImpressionList)
+
     }
 
 

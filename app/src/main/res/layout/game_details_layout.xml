@@ -35,11 +35,13 @@
 
     <TextView
         android:id="@+id/game_title_textview"
-        android:layout_width="409dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="412dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="9dp"
         android:gravity="center"
         android:text="TextView"
+        android:textAllCaps="true"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_image" />
@@ -135,7 +137,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/impression_list"
         android:layout_width="413dp"
-        android:layout_height="126dp"
+        android:layout_height="80dp"
+        android:paddingLeft="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

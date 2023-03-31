@@ -9,7 +9,9 @@ class GameData {
                 Game("Tekken 6","PS3","27.10.2009",8.8,
                     "tekken6","T","Namco Bandai Games","Namco Bandai Games",
                     "Fighting","Tekken 6 (Japanese: 鉄拳6) is a fighting game developed and published by Bandai Namco Games. " +
-                            "It is the sixth main and seventh installment in the Tekken franchise.",listOf()),
+                            "It is the sixth main and seventh installment in the Tekken franchise.",
+                    listOf(UserRating("epeljto1",3132023,5.5),
+                        UserReview("epeljto",122023,"Excellent"))),
                 Game("Grand Theft Auto V","PS5","17.09.2013",10.0,
                 "","","","","","", listOf()
                 ),

@@ -44,7 +44,7 @@ class GameDetailActivity : AppCompatActivity() {
         title = findViewById(R.id.game_title_textview)
         coverImage = findViewById(R.id.cover_imageview)
         platform = findViewById(R.id.platforn_textview)
-        releaseDate = findViewById(R.id.release_date)
+        releaseDate = findViewById(R.id.release_date_textview)
         esrbrating = findViewById(R.id.esrb_rating_textview)
         developer = findViewById(R.id.developer_textview)
         publisher = findViewById(R.id.publisher_textview)

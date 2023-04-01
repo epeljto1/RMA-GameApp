@@ -107,3 +107,4 @@ class TestLayout {
         onView(withText(prvaIgra.description)).check(matches(isCompletelyDisplayed()))
     }
 }
+

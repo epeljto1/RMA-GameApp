@@ -84,5 +84,10 @@ class GameDetailActivity : AppCompatActivity() {
 
     }
 
+    fun getClick() : Int
+    {
+        return click
+    }
+
 
 }

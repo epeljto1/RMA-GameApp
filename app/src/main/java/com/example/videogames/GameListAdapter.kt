@@ -1,6 +1,5 @@
 package com.example.videogames
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,10 +8,12 @@ import androidx.recyclerview.widget.RecyclerView
 
 public lateinit var igrica: String
 
+
 class GameListAdapter(
     private var games: List<Game>,
     private val onItemClicked: (game:Game) -> Unit
 ) : RecyclerView.Adapter<GameListAdapter.ViewHolder>() {
+
 
   class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
       val game_rating_textview: TextView

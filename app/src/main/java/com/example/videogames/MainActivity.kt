@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var detailsBtn: Button
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             detailsBtn.isEnabled = true
             detailsBtn.setOnClickListener {
                 val intent = Intent(this, GameDetailActivity::class.java).apply {
-                    putExtra("game_title_textview", igrica)
+                    putExtra("game_title_textview",igrica)
                 }
                 startActivity(intent)
             }

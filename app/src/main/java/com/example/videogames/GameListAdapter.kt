@@ -23,7 +23,7 @@ class GameListAdapter(
       init {
           game_rating_textview=view.findViewById(R.id.game_rating_textview)
           game_title_textview=view.findViewById(R.id.game_title_textview)
-          game_release_date_textview=view.findViewById(R.id.game_release_date_textview)
+          game_release_date_textview=view.findViewById(R.id.release_date)
           game_platform_textview=view.findViewById(R.id.game_platform_textview)
       }
   }

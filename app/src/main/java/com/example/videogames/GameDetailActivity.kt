@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+
+
 class GameDetailActivity : AppCompatActivity() {
     private lateinit var game: Game
     private lateinit var title: TextView
@@ -21,9 +23,9 @@ class GameDetailActivity : AppCompatActivity() {
     private lateinit var publisher: TextView
     private lateinit var genre: TextView
     private lateinit var description: TextView
-    private lateinit var detailsBtn: Button
     private lateinit var Impressions: RecyclerView
     private lateinit var ImpressionAdapter: GameImpressionAdapter
+    private lateinit var detailsBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +37,9 @@ class GameDetailActivity : AppCompatActivity() {
         val buttonClick = findViewById<Button>(R.id.home_button)
         buttonClick.setOnClickListener{
             val intent = Intent(this,MainActivity::class.java)
+            click = 1
             startActivity(intent)
+
         }
         title = findViewById(R.id.game_title_textview)
         coverImage = findViewById(R.id.cover_imageview)

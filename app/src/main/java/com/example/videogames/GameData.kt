@@ -11,33 +11,55 @@ class GameData {
                     "Fighting","Tekken 6 (Japanese: 鉄拳6) is a fighting game developed and published by Bandai Namco Games. " +
                             "It is the sixth main and seventh installment in the Tekken franchise.",
                     listOf(UserRating("epeljto1",3132023,5.5),
-                        UserReview("epeljto",122023,"Excellent"))),
+                        UserReview("epeljto",122023,"Excellent"),
+                    UserRating("useran",2522023,3.5))),
                 Game("Grand Theft Auto V","PS5","17.09.2013",10.0,
-                "","","","","","", listOf()
+                "grandtheftautov","M","Rockstar North","Rockstar Games","Action-adventure",
+                    "The single-player story follows three protagonists and " +
+                            "their attempts to commit heists while under pressure from a corrupt government agency and powerful criminals.", listOf()
                 ),
                 Game("Crash Nitro Kart","PS2","11.11.2003",7.4,
-                "","","","","","", listOf()
+                "crashnitrokart","E","Vicarious Visions","Universal Unteractive","Racing",
+                    "The game's story centers on the abduction of Crash Bandicoot, " +
+                            "along with other characters, by the dictator Emperor Velo XXVII." +
+                            "Threatening to destroy the Earth, he forces them to race.", listOf()
                 ),
                 Game("Tomb Raider: Underworld","Windows","18.11.2008",8.0,
-                "","","","","","", listOf()
+                "tombraiderunderworld","T","Crystal Dynamics","Eidos Interactive",
+                    "Action-adventure",
+                    "Underworld follows archaeologist-adventurer Lara Croft as she searches for Mjolnir, " +
+                            "an artefact key to entering the realm of Helheim, while confronting adversaries from her past.", listOf()
                 ),
                 Game("Red Dead Redemption","Xbox 360","18.05.2010",9.7,
-                "","","","","","", listOf()
+                "reddeadredemption","M","Rockstar San Diego","Rockstar Games",
+                    "Action-adventure","The game is set during the decline of the American frontier in the year 1911 and follows John Marston " +
+                            "whose family is taken hostage in ransom for his services.", listOf()
                 ),
                 Game("Spyro the Dragon","PS1","09.09.1998",9.0,
-                "","","","","","", listOf()
+                "spyrothedragon","E","Insomniac Games","Sony Computer Entertainment","Platform",
+                    "A young purple dragon named Spyro, " +
+                            "and his dragonfly friend, Sparx, must journey across the Dragon Kingdom to defeat Gnasty Gnorc, " +
+                            "who has overtaken the 5 dragon Homeworlds.", listOf()
                 ),
                 Game("Sonic & Sega All-Stars Racing","Wii","23.02.2010",8.0,
-                "","","","","","", listOf()
+                "sonicandsegaallstarsracing","E","Sumo Digital","Sega",
+                    "Racing","The game is a mascot kart racing game. Players can choose to race as one of 20 characters from " +
+                            "various Sega franchises such as Sonic the Hedgehog, Crazy Taxi, and Fantasy Zone.", listOf()
                 ),
-                Game("Tomb Raider: Anniversary","Windows","1.06.2007",7.0,
-                "","","","","","", listOf()
+                Game("Tomb Raider: Anniversary","Windows","01.06.2007",7.0,
+                "tombraideranniversary","T","Crystal Dynamics","Eidos Interactive",
+                    "Action-adventure","Taking place before the events of 2006's Tomb Raider: Legend, Anniversary " +
+                            "follows series protagonist Lara Croft's quest for the Scion of Atlantis.", listOf()
                 ),
                 Game("Mortal Kombat","PS3","19.04.2011",8.0,
-                "","","","","","", listOf()
+                "mortalkombat","M","NetherRealm Studios","Warner Bros. Interactive Entertainment","Fighting",
+                    "The divine protector of Earth, Raiden, attempts to change the aftermath of the events of " +
+                            "Armageddon by contacting his past self as he faces defeat at the hands of the evil emperor of Outworld, Shao Kahn.", listOf()
                 ),
                 Game("Grand Theft Auto: San Andreas","Windows","26.10.2004",9.3,
-                "","","","","","", listOf()
+                "grandtheftautosanandreas","A","Rockstar North","Rockstar Games","Action-adventure",
+                    "The story follows Carl \"CJ\" Johnson, who returns home following his mother's murder and is drawn back into " +
+                            "a life of crime while clashing with corrupt authorities and powerful criminals.", listOf()
                 )
 
             )

@@ -69,6 +69,7 @@ class GameDetailActivity : AppCompatActivity() {
         val imageName: String = g.coverImage
         var id: Int = context.resources.getIdentifier(imageName,"drawable",context.packageName)
         val ImpressionList: List<UserImpression> = g.userImpressions
+        val sortedList=ImpressionList.sortedBy { it.timestamp }
         coverImage.setImageResource(id)
         platform.text = game.platform
         releaseDate.text = game.releaseDate
@@ -80,13 +81,8 @@ class GameDetailActivity : AppCompatActivity() {
         Impressions.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         ImpressionAdapter = GameImpressionAdapter(listOf())
         Impressions.adapter=ImpressionAdapter
-        ImpressionAdapter.updateImpressions(ImpressionList)
+        ImpressionAdapter.updateImpressions(sortedList.asReversed())
 
-    }
-
-    fun getClick() : Int
-    {
-        return click
     }
 
 

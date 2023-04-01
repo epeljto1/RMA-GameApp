@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 public var click: Int = 0
 
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     private lateinit var Games: RecyclerView
     private lateinit var GamesAdapter: GameListAdapter
     private var GamesList =  GameData.getAll()

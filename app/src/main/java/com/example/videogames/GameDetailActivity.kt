@@ -36,7 +36,7 @@ class GameDetailActivity : AppCompatActivity() {
 
         val buttonClick = findViewById<Button>(R.id.home_button)
         buttonClick.setOnClickListener{
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this,HomeActivity::class.java)
             click = 1
             startActivity(intent)
 
@@ -44,7 +44,7 @@ class GameDetailActivity : AppCompatActivity() {
         title = findViewById(R.id.game_title_textview)
         coverImage = findViewById(R.id.cover_imageview)
         platform = findViewById(R.id.platforn_textview)
-        releaseDate = findViewById(R.id.release_date_textview)
+        releaseDate = findViewById(R.id.release_date)
         esrbrating = findViewById(R.id.esrb_rating_textview)
         developer = findViewById(R.id.developer_textview)
         publisher = findViewById(R.id.publisher_textview)

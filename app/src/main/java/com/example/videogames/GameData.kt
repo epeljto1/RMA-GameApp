@@ -10,9 +10,11 @@ class GameData {
                     "tekken6","T","Namco Bandai Games","Namco Bandai Games",
                     "Fighting","Tekken 6 (Japanese: 鉄拳6) is a fighting game developed and published by Bandai Namco Games. " +
                             "It is the sixth main and seventh installment in the Tekken franchise.",
-                    listOf(UserRating("epeljto1",3132023,5.5),
-                        UserReview("epeljto",122023,"Excellent"),
-                    UserRating("useran",2522023,3.5))),
+                    listOf(UserRating("emina",24231511,5.0),
+                        UserReview("faris",13231345,"I love this game."),
+                    UserReview("dalila",13231023,"So many characters!"),
+                    UserReview("amer",11231841,"Great game to play with your friends!"),
+                    UserRating("hana",14231515,4.5))),
                 Game("Grand Theft Auto V","PS5","17.09.2013",10.0,
                 "grandtheftautov","M","Rockstar North","Rockstar Games","Action-adventure",
                     "The single-player story follows three protagonists and " +

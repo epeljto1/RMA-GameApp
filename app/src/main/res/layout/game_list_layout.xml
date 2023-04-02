@@ -2,24 +2,28 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="250dp"
-    android:layout_height="250dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_marginLeft="0dp"
     android:layout_marginTop="0dp"
     android:layout_marginEnd="0dp"
     android:layout_marginRight="0dp"
-    app:cardBackgroundColor="#B2EEF6"
-    app:cardCornerRadius="0dp">
+    app:cardBackgroundColor="#3F51B5"
+    app:cardCornerRadius="2dp"
+    app:contentPaddingBottom="2dp"
+    app:contentPaddingLeft="2dp"
+    app:contentPaddingRight="2dp"
+    app:contentPaddingTop="2dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="250dp"
-        android:layout_height="250dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/release_date"
-            android:layout_width="185dp"
-            android:layout_height="75dp"
-            android:background="#B2EEF6"
+            android:layout_width="183dp"
+            android:layout_height="73dp"
+            android:background="#7FB6E1"
             android:gravity="center"
             android:text="Release Date"
             app:layout_constraintBottom_toTopOf="@+id/game_platform_textview"
@@ -29,8 +33,8 @@
 
         <TextView
             android:id="@+id/game_title_textview"
-            android:layout_width="185dp"
-            android:layout_height="100dp"
+            android:layout_width="183dp"
+            android:layout_height="102dp"
             android:background="#B2EEF6"
             android:gravity="center"
             android:text="Title"
@@ -41,8 +45,8 @@
 
         <TextView
             android:id="@+id/game_rating_textview"
-            android:layout_width="65dp"
-            android:layout_height="250dp"
+            android:layout_width="63dp"
+            android:layout_height="248dp"
             android:background="#BA7CC5"
             android:gravity="center"
             android:text="Rating"
@@ -53,8 +57,8 @@
 
         <TextView
             android:id="@+id/game_platform_textview"
-            android:layout_width="185dp"
-            android:layout_height="75dp"
+            android:layout_width="183dp"
+            android:layout_height="73dp"
             android:background="#B2EEF6"
             android:gravity="center"
             android:text="Platform"

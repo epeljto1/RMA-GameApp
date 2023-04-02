@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="413dp"
-    android:layout_height="125dp"
+    android:layout_height="wrap_content"
     android:layout_marginLeft="5dp"
     android:layout_marginTop="5dp"
     android:layout_marginEnd="5dp"
@@ -11,8 +11,8 @@
     app:cardCornerRadius="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
+        android:layout_width="413dp"
+        android:layout_height="wrap_content"
         android:scrollbars="vertical">
 
 
@@ -29,7 +29,7 @@
         <TextView
             android:id="@+id/review_textview"
             android:layout_width="413dp"
-            android:layout_height="98dp"
+            android:layout_height="wrap_content"
             android:text="Review"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -30,7 +30,7 @@ class HomeActivity : AppCompatActivity() {
         else if(click == 1) {
             detailsBtn.isEnabled = true
             detailsBtn.setOnClickListener {
-                val intent = Intent(this, GameDetailActivity::class.java).apply {
+                val intent = Intent(this, GameDetailsActivity::class.java).apply {
                     putExtra("game_title_textview",igrica)
                 }
                 startActivity(intent)
@@ -50,7 +50,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun showGameDetails(game: Game) {
-        val intent = Intent(this, GameDetailActivity::class.java).apply {
+        val intent = Intent(this, GameDetailsActivity::class.java).apply {
             putExtra("game_title_textview", game.title)
         }
         startActivity(intent)

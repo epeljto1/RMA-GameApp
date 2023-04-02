@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 
-class GameDetailActivity : AppCompatActivity() {
+class GameDetailsActivity : AppCompatActivity() {
     private lateinit var game: Game
     private lateinit var title: TextView
     private lateinit var coverImage: ImageView

@@ -39,23 +39,23 @@
 
     <TextView
         android:id="@+id/game_title_textview"
-        android:layout_width="412dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="9dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
         android:gravity="center"
         android:text="TextView"
         android:textAllCaps="true"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/cover_imageview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_image" />
+        app:layout_constraintTop_toBottomOf="@+id/home_button" />
 
     <ImageView
         android:id="@+id/cover_imageview"
-        android:layout_width="409dp"
+        android:layout_width="wrap_content"
         android:layout_height="115dp"
-        android:layout_marginTop="11dp"
         android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/platforn_textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/game_title_textview"
@@ -63,77 +63,77 @@
 
     <TextView
         android:id="@+id/platforn_textview"
-        android:layout_width="409dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
         android:gravity="center"
         android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/release_date_textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cover_imageview" />
 
     <TextView
         android:id="@+id/release_date_textview"
-        android:layout_width="409dp"
-        android:layout_height="19dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
         android:gravity="center"
         android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/esrb_rating_textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/platforn_textview" />
 
     <TextView
         android:id="@+id/esrb_rating_textview"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
         android:gravity="center"
         android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/developer_textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/release_date_textview" />
 
     <TextView
         android:id="@+id/developer_textview"
-        android:layout_width="409dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="26dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
         android:gravity="center"
         android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/publisher_textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/esrb_rating_textview" />
 
     <TextView
         android:id="@+id/publisher_textview"
-        android:layout_width="409dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="19dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
         android:gravity="center"
         android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/genre_textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/developer_textview" />
 
     <TextView
         android:id="@+id/genre_textview"
-        android:layout_width="409dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
         android:gravity="center"
         android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/description_textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/publisher_textview" />
 
     <TextView
         android:id="@+id/description_textview"
-        android:layout_width="409dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
         android:gravity="center"
         android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/impression_list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/genre_textview" />
@@ -141,7 +141,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/impression_list"
         android:layout_width="413dp"
-        android:layout_height="162dp"
+        android:layout_height="243dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         app:layout_constraintBottom_toBottomOf="parent"

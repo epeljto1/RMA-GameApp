@@ -10,15 +10,20 @@ class GameData {
                     "tekken6","T","Namco Bandai Games","Namco Bandai Games",
                     "Fighting","Tekken 6 (Japanese: 鉄拳6) is a fighting game developed and published by Bandai Namco Games. " +
                             "It is the sixth main and seventh installment in the Tekken franchise.",
-                    listOf(UserRating("emina",24231511,5.0),
-                        UserReview("faris",13231345,"I love this game."),
-                    UserReview("dalila",13231023,"So many characters!"),
-                    UserReview("amer",11231841,"Great game to play with your friends!"),
-                    UserRating("hana",14231515,4.5))),
+                    listOf(UserRating("emina",2304021557,5.0),
+                        UserReview("faris",2303011345,"I love this game."),
+                    UserReview("dalila",2303011023,"So many characters!"),
+                    UserReview("amer",2301011841,"Great game to play with your friends!"),
+                    UserRating("hana",2304011515,4.5))),
                 Game("Grand Theft Auto V","PS5","17.09.2013",10.0,
                 "grandtheftautov","M","Rockstar North","Rockstar Games","Action-adventure",
                     "The single-player story follows three protagonists and " +
-                            "their attempts to commit heists while under pressure from a corrupt government agency and powerful criminals.", listOf()
+                            "their attempts to commit heists while under pressure from a corrupt government agency and powerful criminals.",
+                    listOf(UserRating("ines",2304021540,5.0),
+                    UserReview("emina2",2204021415,"One of the best games ever"),
+                    UserRating("samir1",2303151147,4.5),
+                    UserReview("user23",2303151622,"I will never get bored of playing this! Best action" +
+                            "game ever!"),UserRating("gaminchannel11",2304021601,5.0))
                 ),
                 Game("Crash Nitro Kart","PS2","11.11.2003",7.4,
                 "crashnitrokart","E","Vicarious Visions","Universal Unteractive","Racing",

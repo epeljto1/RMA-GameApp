@@ -20,7 +20,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/release_date"
+            android:id="@+id/game_release_date_textview"
             android:layout_width="183dp"
             android:layout_height="73dp"
             android:background="#7FB6E1"
@@ -38,7 +38,7 @@
             android:background="#B2EEF6"
             android:gravity="center"
             android:text="Title"
-            app:layout_constraintBottom_toTopOf="@+id/release_date"
+            app:layout_constraintBottom_toTopOf="@+id/game_release_date_textview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/game_rating_textview"
             app:layout_constraintTop_toTopOf="parent" />
@@ -51,7 +51,7 @@
             android:gravity="center"
             android:text="Rating"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/release_date"
+            app:layout_constraintEnd_toStartOf="@+id/game_release_date_textview"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,7 +65,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/game_rating_textview"
-            app:layout_constraintTop_toBottomOf="@+id/release_date" />
+            app:layout_constraintTop_toBottomOf="@+id/game_release_date_textview" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

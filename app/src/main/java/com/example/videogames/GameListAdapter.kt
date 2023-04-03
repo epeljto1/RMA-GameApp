@@ -6,8 +6,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-public lateinit var igrica: String
-
 
 class GameListAdapter(
     private var games: List<Game>,

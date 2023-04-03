@@ -7,8 +7,6 @@ import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-public var click: Int = 0
-
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var Games: RecyclerView

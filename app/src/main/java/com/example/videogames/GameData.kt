@@ -22,8 +22,8 @@ class GameData {
                     listOf(UserRating("ines",2304021540,5.0),
                     UserReview("emina2",2204021415,"One of the best games ever"),
                     UserRating("samir1",2303151147,4.5),
-                    UserReview("user23",2303151622,"I will never get bored of playing this! Best action" +
-                            "game ever!"),UserRating("gaminchannel11",2304021601,5.0))
+                    UserReview("user23",2303151622,"I will never get bored of playing this!"),
+                        UserRating("gaminchannel11",2304021601,5.0))
                 ),
                 Game("Crash Nitro Kart","PS2","11.11.2003",7.4,
                 "crashnitrokart","E","Vicarious Visions","Universal Unteractive","Racing",

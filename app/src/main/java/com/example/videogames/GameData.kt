@@ -76,8 +76,8 @@ class GameData {
             val games: ArrayList<Game> = arrayListOf()
             games.addAll(getAll())
             val game = games.find{game -> title == game.title}
-            return game?:Game("Test","Test","Test",0.0,
-                "Test","Test","Test","Test","Test","Test", listOf()
+            return game?:Game("","","",0.0,
+                "","","","","","", listOf()
             )
         }
     }

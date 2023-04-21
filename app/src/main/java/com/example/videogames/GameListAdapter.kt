@@ -9,9 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class GameListAdapter(
     private var games: List<Game>,
-    private val onItemClicked: (game:Game) -> Unit
+    private val onItemClicked: (game:Game) -> Unit,
 ) : RecyclerView.Adapter<GameListAdapter.ViewHolder>() {
-
 
   class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
       val game_rating_textview: TextView
@@ -39,7 +38,7 @@ class GameListAdapter(
         viewHolder.game_rating_textview.text=games[position].rating.toString()
         viewHolder.itemView.setOnClickListener{
             onItemClicked(games[position])
-        igrica = games[position].title}
+        igrica = games[position].title }
 
     }
     override fun getItemCount():Int = games.size

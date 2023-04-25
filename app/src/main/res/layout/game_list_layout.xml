@@ -29,10 +29,10 @@
             app:layout_constraintBottom_toTopOf="@+id/game_platform_textview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/game_rating_textview"
-            app:layout_constraintTop_toBottomOf="@+id/game_title_textview" />
+            app:layout_constraintTop_toBottomOf="@+id/item_title_textview" />
 
         <TextView
-            android:id="@+id/game_title_textview"
+            android:id="@+id/item_title_textview"
             android:layout_width="183dp"
             android:layout_height="102dp"
             android:background="#B2EEF6"

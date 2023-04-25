@@ -7,10 +7,18 @@
     <fragment
         android:id="@+id/homeItem"
         android:name="com.example.videogames.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeItem_to_gameDetailsItem"
+            app:destination="@id/gameDetailsItem" />
+    </fragment>
 
     <fragment
         android:id="@+id/gameDetailsItem"
         android:name="com.example.videogames.GameDetailsFragment"
-        android:label="GameDetailsFragment" />
+        android:label="GameDetailsFragment" >
+        <action
+            android:id="@+id/action_gameDetailsItem_to_homeItem"
+            app:destination="@id/homeItem" />
+    </fragment>
 </navigation>

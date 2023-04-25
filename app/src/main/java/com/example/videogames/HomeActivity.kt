@@ -1,58 +1,40 @@
 package com.example.videogames
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 
 class HomeActivity : AppCompatActivity() {
-    private lateinit var Games: RecyclerView
-    private lateinit var GamesAdapter: GameListAdapter
-    private var GamesList =  GameData.getAll()
-    private lateinit var homeBtn: Button
-    private lateinit var detailsBtn: Button
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        navView = findViewById(R.id.bottom_nav)
 
-        homeBtn = findViewById(R.id.home_button)
-        homeBtn.isEnabled = false
-        detailsBtn = findViewById(R.id.details_button)
-        if(click == 0)
-        detailsBtn.isEnabled = false
-        else if(click == 1) {
-            detailsBtn.isEnabled = true
-            detailsBtn.setOnClickListener {
-                val intent = Intent(this, GameDetailsActivity::class.java).apply {
-                    putExtra("game_title_textview",igrica)
+
+        navView.setupWithNavController(navController)
+
+        navView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.homeItem -> {
+                    navController.navigate(R.id.homeItem)
+                    true
                 }
-                startActivity(intent)
+                R.id.gameDetailsItem -> {
+                    val bundle = Bundle()
+                    bundle.putString("game_title_textview", igrica)
+                    navController.navigate(R.id.gameDetailsItem, bundle)
+                    true
+                }
             }
-        }
-
-        Games = findViewById(R.id.game_list)
-        Games.layoutManager = LinearLayoutManager(
-            this,
-            LinearLayoutManager.VERTICAL,
             false
-        )
-        GamesAdapter = GameListAdapter(arrayListOf()) {game ->  showGameDetails(game)}
-        Games.adapter = GamesAdapter
-        GamesAdapter.updateGames(GamesList)
-
-    }
-
-    private fun showGameDetails(game: Game) {
-        val intent = Intent(this, GameDetailsActivity::class.java).apply {
-            putExtra("game_title_textview", game.title)
         }
-        startActivity(intent)
-    }
+        navView.menu.getItem(0).isEnabled = false
+        navView.menu.getItem(1).isEnabled = false
 
+    }
 
 }

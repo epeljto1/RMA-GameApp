@@ -8,10 +8,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class GameDetailsFragment : Fragment(){
     private lateinit var game: Game
@@ -39,7 +37,6 @@ class GameDetailsFragment : Fragment(){
         genre = view.findViewById(R.id.genre_textview)
         description = view.findViewById(R.id.description_textview)
         Impressions = view.findViewById(R.id.impression_list)
-
         return view
     }
 
@@ -49,6 +46,13 @@ class GameDetailsFragment : Fragment(){
         game = GameData.getDetails(name.toString())
         populateDetails()
     }
+
+    override fun onResume() {
+        super.onResume()
+        navView.menu.getItem(0).isEnabled = true
+        navView.menu.getItem(1).isEnabled = true
+    }
+
     private fun populateDetails() {
         title.text = game.title
         val context: Context = coverImage.context

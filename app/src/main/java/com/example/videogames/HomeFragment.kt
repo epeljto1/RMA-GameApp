@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -20,17 +21,12 @@ class HomeFragment : Fragment() {
         Games = view.findViewById(R.id.game_list)
         Games.layoutManager = GridLayoutManager(activity,1)
         GamesAdapter = GameListAdapter(arrayListOf()) {game ->
-        val gameDetailsFragment = GameDetailsFragment()
         val bundle = Bundle()
         bundle.putString("game_title_textview",game.title)
-        gameDetailsFragment.arguments = bundle
-        val fragmentManager = requireActivity().supportFragmentManager
-        fragmentManager.beginTransaction()
-            .replace(R.id.nav_host_fragment,gameDetailsFragment)
-            .addToBackStack(null)
-            .commit() }
+        view.findNavController().navigate(R.id.action_homeItem_to_gameDetailsItem,bundle) }
         Games.adapter = GamesAdapter
         GamesAdapter.updateGames(GamesList)
         return view;
     }
+
 }

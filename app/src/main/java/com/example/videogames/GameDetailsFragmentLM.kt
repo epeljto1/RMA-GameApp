@@ -8,10 +8,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class GameDetailsFragment : Fragment(){
+class GameDetailsFragmentLM : Fragment() {
     private lateinit var game: Game
     private lateinit var title: TextView
     private lateinit var coverImage: ImageView
@@ -26,7 +27,7 @@ class GameDetailsFragment : Fragment(){
     private lateinit var ImpressionAdapter: GameImpressionAdapter
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {
-        val view = inflater.inflate(R.layout.fragment_game_details, container, false)
+        val view = inflater.inflate(R.layout.fragment_game_details_lm, container, false)
         title = view.findViewById(R.id.game_title_textview)
         coverImage = view.findViewById(R.id.cover_imageview)
         platform = view.findViewById(R.id.platform_textview)
@@ -42,15 +43,8 @@ class GameDetailsFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val name = arguments?.getString("game_title_textview")
-        game = GameData.getDetails(name.toString())
+        game=GameData.getAll()[0]
         populateDetails()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        val main = activity as HomeActivity
-        main.enableBottomNav()
     }
 
     private fun populateDetails() {
@@ -74,5 +68,4 @@ class GameDetailsFragment : Fragment(){
         Impressions.adapter=ImpressionAdapter
         ImpressionAdapter.updateImpressions(sortedList.asReversed())
     }
-
 }

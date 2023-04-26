@@ -12,6 +12,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val orientation = resources.configuration.orientation
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
 
             setContentView(R.layout.activity_main)
 
@@ -19,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
             val navHostFragment =
                 supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
             val navController = navHostFragment.navController
-            val navView : BottomNavigationView = findViewById(R.id.bottom_nav)
+            val navView: BottomNavigationView = findViewById(R.id.bottom_nav)
 
 
             navView.setupWithNavController(navController)
@@ -41,14 +42,16 @@ class HomeActivity : AppCompatActivity() {
             }
             navView.menu.getItem(0).isEnabled = false
             navView.menu.getItem(1).isEnabled = false
-
+        } else {
+            setContentView(R.layout.activity_main_lm)
+            val navHostFragment =
+                supportFragmentManager.findFragmentById(R.id.gameContainer) as NavHostFragment
+            val navController = navHostFragment.navController
+        }
     }
-
     fun enableBottomNav()
     {
         findViewById<BottomNavigationView>(R.id.bottom_nav).menu.getItem(0).isEnabled = true
         findViewById<BottomNavigationView>(R.id.bottom_nav).menu.getItem(1).isEnabled = true
     }
-
-
 }

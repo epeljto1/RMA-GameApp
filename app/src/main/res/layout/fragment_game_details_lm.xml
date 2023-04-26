@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="357dp"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
@@ -10,114 +10,108 @@
     <TextView
         android:id="@+id/game_title_textview"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="76dp"
         android:gravity="center"
         android:text="TextView"
         android:textAllCaps="true"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cover_imageview"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/cover_imageview"
         android:layout_width="wrap_content"
-        android:layout_height="115dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/platform_textview"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_title_textview"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/platform_textview"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="22dp"
         android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/release_date_textview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cover_imageview" />
+        app:layout_constraintStart_toEndOf="@+id/cover_imageview"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/release_date_textview"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
         android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/esrb_rating_textview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/platform_textview" />
+        app:layout_constraintStart_toEndOf="@+id/platform_textview"
+        app:layout_constraintTop_toBottomOf="@+id/game_title_textview" />
 
     <TextView
         android:id="@+id/esrb_rating_textview"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
         android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/developer_textview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/release_date_textview" />
+        app:layout_constraintStart_toEndOf="@+id/release_date_textview"
+        app:layout_constraintTop_toBottomOf="@+id/game_title_textview" />
 
     <TextView
         android:id="@+id/developer_textview"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
         android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/publisher_textview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/esrb_rating_textview" />
+        app:layout_constraintStart_toEndOf="@+id/cover_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/platform_textview" />
 
     <TextView
         android:id="@+id/publisher_textview"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
         android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/genre_textview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cover_imageview"
         app:layout_constraintTop_toBottomOf="@+id/developer_textview" />
 
     <TextView
         android:id="@+id/genre_textview"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="22dp"
         android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/description_textview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/publisher_textview" />
+        app:layout_constraintStart_toEndOf="@+id/esrb_rating_textview"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/description_textview"
         android:layout_width="wrap_content"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/impression_list"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genre_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/cover_imageview" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/impression_list"
-        android:layout_width="413dp"
-        android:layout_height="243dp"
+        android:layout_width="357dp"
+        android:layout_height="100dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         android:paddingBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description_textview" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -49,8 +49,8 @@ class GameDetailsFragment : Fragment(){
 
     override fun onResume() {
         super.onResume()
-        navView.menu.getItem(0).isEnabled = true
-        navView.menu.getItem(1).isEnabled = true
+        val main = activity as HomeActivity
+        main.enableBottomNav()
     }
 
     private fun populateDetails() {

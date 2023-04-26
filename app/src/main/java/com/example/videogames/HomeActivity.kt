@@ -1,40 +1,54 @@
 package com.example.videogames
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        val navController = navHostFragment.navController
-        navView = findViewById(R.id.bottom_nav)
+
+        val orientation = resources.configuration.orientation
+
+            setContentView(R.layout.activity_main)
 
 
-        navView.setupWithNavController(navController)
+            val navHostFragment =
+                supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+            val navController = navHostFragment.navController
+            val navView : BottomNavigationView = findViewById(R.id.bottom_nav)
 
-        navView.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.homeItem -> {
-                    navController.navigate(R.id.homeItem)
-                    true
+
+            navView.setupWithNavController(navController)
+
+            navView.setOnItemSelectedListener {
+                when (it.itemId) {
+                    R.id.homeItem -> {
+                        navController.navigate(R.id.homeItem)
+                        true
+                    }
+                    R.id.gameDetailsItem -> {
+                        val bundle = Bundle()
+                        bundle.putString("game_title_textview", igrica)
+                        navController.navigate(R.id.gameDetailsItem, bundle)
+                        true
+                    }
                 }
-                R.id.gameDetailsItem -> {
-                    val bundle = Bundle()
-                    bundle.putString("game_title_textview", igrica)
-                    navController.navigate(R.id.gameDetailsItem, bundle)
-                    true
-                }
+                false
             }
-            false
-        }
-        navView.menu.getItem(0).isEnabled = false
-        navView.menu.getItem(1).isEnabled = false
+            navView.menu.getItem(0).isEnabled = false
+            navView.menu.getItem(1).isEnabled = false
 
     }
+
+    fun enableBottomNav()
+    {
+        findViewById<BottomNavigationView>(R.id.bottom_nav).menu.getItem(0).isEnabled = true
+        findViewById<BottomNavigationView>(R.id.bottom_nav).menu.getItem(1).isEnabled = true
+    }
+
 
 }

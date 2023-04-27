@@ -38,7 +38,8 @@ class GameListAdapter(
         viewHolder.game_rating_textview.text=games[position].rating.toString()
         viewHolder.itemView.setOnClickListener{
             onItemClicked(games[position])
-        igrica = games[position].title }
+        igrica = games[position].title
+       }
 
     }
     override fun getItemCount():Int = games.size

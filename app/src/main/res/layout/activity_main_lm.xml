@@ -7,8 +7,8 @@
     tools:context=".HomeActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/gameContainer"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:id="@+id/homeContainer"
+        android:name="com.example.videogames.HomeFragment"
         android:layout_width="372dp"
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,10 +19,12 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/detailsContainer"
-        android:name="com.example.videogames.GameDetailsFragmentLM"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="357dp"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navgraph"
         tools:layout="@layout/fragment_game_details_lm" />
 </androidx.constraintlayout.widget.ConstraintLayout>

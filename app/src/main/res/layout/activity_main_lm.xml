@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/homeContainer"
-        android:name="com.example.videogames.HomeFragment"
+        android:name="ba.etf.rma23.projekat.data.repositories.HomeFragment"
         android:layout_width="372dp"
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"

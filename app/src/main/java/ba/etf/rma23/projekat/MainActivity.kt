@@ -1,21 +1,22 @@
-package com.example.videogames
+package ba.etf.rma23.projekat
 
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import ba.etf.rma23.projekat.data.repositories.igrica
+import ba.etf.rma23.projekat.data.repositories.orientVal
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class HomeActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val orientation = resources.configuration.orientation
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
 
-            orientVal=1
+            orientVal =1
             setContentView(R.layout.activity_main)
 
 
@@ -45,7 +46,7 @@ class HomeActivity : AppCompatActivity() {
             navView.menu.getItem(0).isEnabled = false
             navView.menu.getItem(1).isEnabled = false
         } else {
-            orientVal=2
+            orientVal =2
             setContentView(R.layout.activity_main_lm)
             val navHostFragment =
                 supportFragmentManager.findFragmentById(R.id.detailsContainer) as NavHostFragment

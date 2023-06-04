@@ -1,15 +1,16 @@
-package com.example.videogames
+package ba.etf.rma23.projekat.data.repositories
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import ba.etf.rma23.projekat.R
 
 
 class GameListAdapter(
     private var games: List<Game>,
-    private val onItemClicked: (game:Game) -> Unit,
+    private val onItemClicked: (game: Game) -> Unit,
 ) : RecyclerView.Adapter<GameListAdapter.ViewHolder>() {
 
   class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
@@ -38,11 +39,13 @@ class GameListAdapter(
         viewHolder.game_rating_textview.text=games[position].rating.toString()
         viewHolder.itemView.setOnClickListener{
             onItemClicked(games[position])
+            theGame = games[position]
         igrica = games[position].title
        }
 
     }
     override fun getItemCount():Int = games.size
+
 
     fun updateGames(games: List<Game>) {
         this.games = games

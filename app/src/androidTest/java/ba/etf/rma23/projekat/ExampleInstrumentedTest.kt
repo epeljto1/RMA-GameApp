@@ -1,5 +1,4 @@
-package com.example.videogames
-
+package ba.etf.rma23.projekat
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
@@ -9,6 +8,8 @@ import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import ba.etf.rma23.projekat.data.repositories.GameData
+import ba.etf.rma23.projekat.data.repositories.GameListAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.hamcrest.CoreMatchers.*
 import org.junit.Assert.assertEquals
@@ -20,7 +21,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class OwnEspressoTests {
     @get:Rule
-    var homeRule:ActivityScenarioRule<HomeActivity> = ActivityScenarioRule(HomeActivity::class.java)
+    var homeRule:ActivityScenarioRule<MainActivity> = ActivityScenarioRule(MainActivity::class.java)
 
     // Prvi scenarij Test1() provjerava ispravnost aplikacije kada se ona tek pokrene
     // Testira se da li je Home fragment vidljiv i da li aplikacija ima bottom navigation

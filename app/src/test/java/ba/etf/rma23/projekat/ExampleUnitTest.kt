@@ -23,8 +23,11 @@ class ExampleUnitTest {
         )*/
         assertEquals("Tomb Raider: Legend",games[0].title)*/
 
-        GamesRepository.getGamesByName("Tomb Raider")
-        var games = GamesRepository.sortGames()
-        assertEquals("Tomb Raider: Chronicles",games[0].title)
+        var games = AccountGamesRepository.getGamesContainingString("Tomb")
+        assertEquals(2,games.size)
+        AccountGamesRepository.setAge(15)
+        AccountGamesRepository.removeNonSafe()
+        var savedGames = AccountGamesRepository.getSavedGames()
+        assertEquals(3,savedGames.size)
     }
 }

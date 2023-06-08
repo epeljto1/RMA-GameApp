@@ -7,7 +7,7 @@ class GameData {
         fun getAll(): List<Game>
         {
 
-            return listOf(/*
+            return listOf(
                 Game(1,"Tekken 6","PS3","27.10.2009",8.8,
                     "tekken6","T","Namco Bandai Games","Namco Bandai Games",
                     "Fighting","Tekken 6 (Japanese: 鉄拳6) is a fighting game developed and published by Bandai Namco Games. " +
@@ -73,7 +73,7 @@ class GameData {
                 "grandtheftautosanandreas","A","Rockstar North","Rockstar Games","Action-adventure",
                     "The story follows Carl \"CJ\" Johnson, who returns home following his mother's murder and is drawn back into " +
                             "a life of crime while clashing with corrupt authorities and powerful criminals.", listOf()
-                ) */
+                )
 
             )
         }

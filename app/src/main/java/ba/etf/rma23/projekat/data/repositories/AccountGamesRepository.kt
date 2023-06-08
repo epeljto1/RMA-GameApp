@@ -95,25 +95,24 @@ object AccountGamesRepository {
         if(age==null)
             return false
 
-        for(game in games)
-        {
             try {
-                if (age < 10) if (game.esrbRating != "E") removeGame(game.id)
-                else if (age < 13) if (game.esrbRating != "E" && game.esrbRating != "E10") removeGame(
-                    game.id
-                )
-                else if (age < 17) if (game.esrbRating != "E" && game.esrbRating != "E10" && game.esrbRating != "T") removeGame(
-                    game.id
-                )
-                else if (age < 18) if (game.esrbRating != "E" && game.esrbRating != "E10" && game.esrbRating != "T" && game.esrbRating != "M") removeGame(
-                    game.id
-                )
+                val gamesToDelete:ArrayList<Game> = ArrayList()
+                for (game in games) {
+                    if (age < 10 && game.esrbRating != "E") gamesToDelete.add(game)
+                    else if (age < 13 && (game.esrbRating == "T" || game.esrbRating == "M" || game.esrbRating == "AO"))
+                        gamesToDelete.add(game)
+                    else if (age < 17 && (game.esrbRating == "M" || game.esrbRating == "AO"))
+                        gamesToDelete.add(game)
+                    else if (age < 18 && game.esrbRating == "AO")
+                        gamesToDelete.add(game)
+                }
+                for(game in gamesToDelete)
+                    removeGame(game.id)
             }
             catch (e:java.lang.Exception)
             {
                 return false
             }
-        }
         return true
     }
 

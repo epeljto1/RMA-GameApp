@@ -45,13 +45,13 @@ class HomeFragment : Fragment() {
                 findNavController().navigate(R.id.gameDetailsItem,bundle)
         }
         Games.adapter = GamesAdapter
-        getSavedGames()
+        /* getSavedGames() */
         val searchEditText: EditText = view.findViewById(R.id.search_query_edittext)
-        val searchButton = view.findViewById<Button>(R.id.search_button)
+        val searchButton = view.findViewById<Button>(R.id.search_button) /*
         searchButton.setOnClickListener {
             val userInput = searchEditText.text.toString()
             getGamesByName(userInput)
-        }
+        } */
         return view;
     }
 
